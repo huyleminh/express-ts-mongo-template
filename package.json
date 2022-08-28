@@ -1,0 +1,33 @@
+{
+	"name": "express-ts-mongo",
+	"version": "1.0.0",
+	"description": "Backend template based on express and mongo",
+	"main": "src/index.ts",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"build": "tsc",
+		"start": "npm run build && node ./dist/index.js",
+		"start:dev": "nodemon ./src/index.ts"
+	},
+	"author": "Huy Le Minh",
+	"license": "ISC",
+	"dependencies": {
+		"axios": "^0.27.2",
+		"cors": "^2.8.5",
+		"dotenv": "^16.0.1",
+		"express": "^4.18.1",
+		"fast-safe-stringify": "^2.1.1",
+		"moment": "^2.29.4",
+		"statuses": "^2.0.1",
+		"winston": "^3.8.1",
+		"winston-daily-rotate-file": "^4.7.1"
+	},
+	"devDependencies": {
+		"@types/cors": "^2.8.12",
+		"@types/express": "^4.17.13",
+		"@types/statuses": "^2.0.0",
+		"nodemon": "^2.0.19",
+		"ts-node": "^10.9.1",
+		"typescript": "^4.8.2"
+	}
+}
