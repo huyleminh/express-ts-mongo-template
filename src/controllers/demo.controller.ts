@@ -1,6 +1,7 @@
 import { NextFunction, Request, Response } from "express";
 // import { DataResponse } from "../core/responses/data.response";
 import { BaseController } from "./base.controller";
+import { DataResponse } from "../core/responses/data.response";
 
 export class DemoController extends BaseController {
 	constructor() {
@@ -18,8 +19,7 @@ export class DemoController extends BaseController {
 	}
 
 	async handleDemo(req: Request, res: Response) {
-		// const dataRes = new DataResponse(200, "Demo");
-		// res.json(dataRes.toJSON());
-		res.send("hello")
+		const dataRes = new DataResponse(200, "Demo");
+		res.json(dataRes.toJSON());
 	}
 }

@@ -4,7 +4,7 @@ import { IBaseResponseObject } from "../interfaces/core.interface";
 export abstract class BaseResponse {
 	protected _createdDate: string;
 
-	constructor(protected _code: number, protected _message: string, protected _data?: any) {
+	protected constructor(protected _code: number, protected _message: string, protected _data?: any) {
 		if (!statuses.code[_code]) {
 			this._code = 200;
 		}

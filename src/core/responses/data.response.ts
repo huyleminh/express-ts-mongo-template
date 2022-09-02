@@ -2,8 +2,8 @@ import { IBaseResponseObject } from "../interfaces/core.interface";
 import { BaseResponse } from "./base.response";
 
 export class DataResponse extends BaseResponse {
-	constructor(code: number, messgage: string, data?: any) {
-		super(code, messgage, data);
+	constructor(code: number, message: string, data?: any) {
+		super(code, message, data);
 	}
 
 	toJSON(): IBaseResponseObject {

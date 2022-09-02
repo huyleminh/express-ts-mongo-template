@@ -6,12 +6,11 @@ export interface IPagination {
 
 export interface IResponseMetadata {
 	createdDate: string;
-	pagination?: IPagination;
 }
 
 export interface IBaseResponseObject {
 	code: number;
 	message: string;
-	data?: any;
+	data: any | null;
 	metadata: IResponseMetadata & Record<string, any>;
 }
