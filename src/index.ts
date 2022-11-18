@@ -42,10 +42,12 @@ async function bootstrap() {
 
 	// start server
 	const HOST = AppConfig.HOST;
-	const PORT = AppConfig.PORT;
+	// const PORT = AppConfig.PORT;
+	const PORT = process.env.PORT;
+	console.log({ PORT, appPort: AppConfig.PORT });
 	const PROTOCOL = AppConfig.PROTOCOL;
 
-	http.createServer(app).listen(PORT, HOST, () => {
+	http.createServer(app).listen(parseInt(PORT as string), HOST, () => {
 		Logger.info(`Server ready at ${PROTOCOL}://${HOST}:${PORT}`, "Bootstrap");
 		console.log(`Server ready at ${PROTOCOL}://${HOST}:${PORT}`);
 	});
