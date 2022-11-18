@@ -5,7 +5,7 @@ export abstract class BaseResponse {
 	protected _createdDate: string;
 
 	protected constructor(protected _code: number, protected _message: string, protected _data?: any) {
-		if (!statuses.code[_code]) {
+		if (!statuses.message[_code]) {
 			this._code = 200;
 		}
 		this._message = _message || statuses.message[this._code] || "OK";
