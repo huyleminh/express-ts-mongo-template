@@ -1,6 +1,8 @@
 import * as dotenv from "dotenv";
 dotenv.config();
 
+console.log({ configPort: process.env.PORT });
+
 export const AppConfig = {
 	APP_ENV: process.env.APP_ENV || "",
 	PROTOCOL: process.env.PROTOCOL || "http",
